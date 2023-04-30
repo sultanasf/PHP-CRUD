@@ -23,7 +23,7 @@
         $jenisKelamin = $_POST['jenisKelamin'];
         $Prodi = $_POST['Prodi'];
 
-        $result = mysqli_query($conn, "UPDATE mhs SET Nama='$Nama',NRP='$NRP',`Jenis Kelamin`='$jenisKelamin',Prodi='$Prodi' WHERE id=$id");
+        $result = mysqli_query($conn, "UPDATE mhs SET Nama='$Nama',NRP='$NRP',`JenisKelamin`='$jenisKelamin',Prodi='$Prodi' WHERE id=$id");
         header("Location: index.php");
         exit();
     }
@@ -35,7 +35,7 @@
     while ($d = mysqli_fetch_array($result)) {
         $Nama = $d['Nama'];
         $NRP = $d['NRP'];
-        $jenisKelamin = $d['Jenis Kelamin'];
+        $jenisKelamin = $d['JenisKelamin'];
         $Prodi = $d['Prodi'];
     }
     ?>

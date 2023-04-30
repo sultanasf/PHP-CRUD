@@ -40,7 +40,7 @@
                         // echo "<td>" . $d['id'] . "</td>";
                         echo "<td>" . $d['NRP'] . "</td>";
                         echo "<td>" . $d['Nama'] . "</td>";
-                        echo "<td>" . $d['Jenis Kelamin'] . "</td>";
+                        echo "<td>" . $d['JenisKelamin'] . "</td>";
                         echo "<td>" . $d['Prodi'] . "</td>";
                         echo "<td> <a href='update.php?id=$d[id]' class='btn btn-sm btn-warning'>Edit</a> | <button  class='btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#exampleModal" . $index . "'>Delete</button>
                         <div class='modal fade' id='exampleModal" . $index . "' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>

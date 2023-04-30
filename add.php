@@ -46,7 +46,7 @@
                     $Prodi = $_POST['Prodi'];
 
                     include("connect.php");
-                    $result = mysqli_query($conn, "INSERT INTO mhs (`Nama`, `NRP`, `Jenis Kelamin`, `Prodi`) VALUES ('$Nama','$NRP','$jenisKelamin','$Prodi')");
+                    $result = mysqli_query($conn, "INSERT INTO mhs (`Nama`, `NRP`, `JenisKelamin`, `Prodi`) VALUES ('$Nama','$NRP','$jenisKelamin','$Prodi')");
 
                     header("Location:index.php");
                     exit();
