@@ -1,3 +1,6 @@
+<?php
+include("./controller/update.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,35 +13,6 @@
 </head>
 
 <body>
-    <?php
-
-    use PgSql\Result;
-
-    include_once("connect.php");
-    if (isset($_POST['update'])) {
-        $id = $_POST['id'];
-
-        $Nama = $_POST['Nama'];
-        $NRP = $_POST['NRP'];
-        $jenisKelamin = $_POST['jenisKelamin'];
-        $Prodi = $_POST['Prodi'];
-
-        $result = mysqli_query($conn, "UPDATE mhs SET Nama='$Nama',NRP='$NRP',`JenisKelamin`='$jenisKelamin',Prodi='$Prodi' WHERE id=$id");
-        header("Location: index.php");
-        exit();
-    }
-    ?>
-    <?php
-    $id = $_GET['id'];
-    $result = mysqli_query($conn, "SELECT * FROM mhs WHERE id=$id");
-
-    while ($d = mysqli_fetch_array($result)) {
-        $Nama = $d['Nama'];
-        $NRP = $d['NRP'];
-        $jenisKelamin = $d['JenisKelamin'];
-        $Prodi = $d['Prodi'];
-    }
-    ?>
     <nav class="navbar fixed-top bg-light">
         <div class="container justify-content-start">
             <a href="./add.php" class="btn btn-outline-success ms-auto" type="button">Tambah Data</a>

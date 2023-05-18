@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
     <div class="container mt-5">
         <div class="row justify-content-center align-items-center g-5">
             <div class="col-3">
-                <form action="" class="form-control mt-4" method="post">
+                <form action="./controller/add.php" class="form-control mt-4" method="post">
                     <div class="py-1 container">
                         <span>Nama:</span>
                         <input required type="text" class="my-1 d-flex" placeholder="Nama" name="Nama">
