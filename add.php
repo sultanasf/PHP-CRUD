@@ -1,3 +1,17 @@
+<?php
+if (isset($_POST['submit'])) {
+    $Nama = $_POST['Nama'];
+    $NRP = $_POST['NRP'];
+    $jenisKelamin = $_POST['jenisKelamin'];
+    $Prodi = $_POST['Prodi'];
+
+    include("connect.php");
+    $result = mysqli_query($conn, "INSERT INTO mhs (`Nama`, `NRP`, `JenisKelamin`, `Prodi`) VALUES ('$Nama','$NRP','$jenisKelamin','$Prodi')");
+
+    header("Location:index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,21 +52,6 @@
                         </div>
                     </div>
                 </form>
-                <?php
-                if (isset($_POST['submit'])) {
-                    $Nama = $_POST['Nama'];
-                    $NRP = $_POST['NRP'];
-                    $jenisKelamin = $_POST['jenisKelamin'];
-                    $Prodi = $_POST['Prodi'];
-
-                    include("connect.php");
-                    $result = mysqli_query($conn, "INSERT INTO mhs (`Nama`, `NRP`, `JenisKelamin`, `Prodi`) VALUES ('$Nama','$NRP','$jenisKelamin','$Prodi')");
-
-                    header("Location:index.php");
-                    exit();
-                }
-                ?>
-
             </div>
         </div>
     </div>
